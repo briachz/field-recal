@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thank You — Briana Cello</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--warm-white: #FAF8F5;
+--charcoal: #1C1C1C;
+--char-mid: #4A4744;
+--taupe: #7A7168;
+--taupe-light:#A89F96;
+--copper: #8B6B3D;
+--copper-light:#C4A060;
+--copper-pale: #E8D5B0;
+--stone: #F2EDE6;
+--stone-dark: #D4C9BC;
+--slate: #2A3240;
+--slate-mid: #3A4558;
+--font-display: "Cormorant Garamond", Georgia, serif;
+--font-body: "Jost", sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+background: var(--slate);
+color: var(--warm-white);
+font-family: var(--font-body);
+font-size: 16px;
+line-height: 1.7;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+/* NAV */
+nav {
+padding: 20px 48px;
+display: flex; align-items: center; justify-content: center;
+border-bottom: 1px solid rgba(196,160,96,0.12);
+}
+.nav-brand {
+font-family: var(–font-body);
+font-size: 0.78rem; font-weight: 300;
+letter-spacing: 0.38em; text-transform: uppercase;
+color: var(–copper-pale);
+}
+
+/* MAIN */
+main {
+flex: 1;
+display: flex; align-items: center; justify-content: center;
+padding: 80px 32px;
+position: relative; overflow: hidden;
+}
+.glow {
+position: absolute;
+width: 600px; height: 600px; border-radius: 50%;
+background: radial-gradient(ellipse, rgba(196,160,96,0.08) 0%, transparent 70%);
+top: 50%; left: 50%; transform: translate(-50%,-50%);
+pointer-events: none;
+}
+.ring {
+position: absolute; border-radius: 50%;
+border: 1px solid rgba(196,160,96,0.07);
+top: 50%; left: 50%; transform: translate(-50%,-50%);
+pointer-events: none;
+}
+
+.card {
+position: relative; z-index: 2;
+max-width: 620px; width: 100%;
+text-align: center;
+border: 1px solid rgba(196,160,96,0.2);
+padding: 64px 52px;
+background: linear-gradient(160deg, rgba(58,69,88,0.8), rgba(42,50,64,0.9));
+}
+.card::before {
+content: ‘’;
+position: absolute; top: 0; left: 0; right: 0; height: 2px;
+background: linear-gradient(to right, transparent, var(–copper-light), transparent);
+}
+
+.check-circle {
+width: 64px; height: 64px; border-radius: 50%;
+border: 1px solid rgba(196,160,96,0.35);
+display: flex; align-items: center; justify-content: center;
+margin: 0 auto 32px;
+font-size: 1.4rem;
+color: var(–copper-light);
+background: rgba(196,160,96,0.06);
+}
+
+.label {
+font-family: var(–font-body); font-size: 0.56rem; font-weight: 500;
+letter-spacing: 0.32em; text-transform: uppercase;
+color: var(–copper-light); margin-bottom: 16px; display: block;
+}
+
+.title {
+font-family: var(–font-display);
+font-size: clamp(2rem, 5vw, 3rem);
+font-weight: 300; line-height: 1.15;
+color: var(–warm-white); margin-bottom: 12px;
+}
+.title em { font-style: italic; color: var(–copper-pale); }
+
+.subtitle {
+font-family: var(–font-display);
+font-size: 1rem; font-style: italic;
+color: rgba(255,255,255,0.35); margin-bottom: 40px;
+}
+
+.divider { width: 36px; height: 1px; background: rgba(196,160,96,0.25); margin: 0 auto 40px; }
+
+.steps-title {
+font-family: var(–font-body); font-size: 0.6rem; font-weight: 500;
+letter-spacing: 0.2em; text-transform: uppercase;
+color: var(–copper-light); margin-bottom: 24px;
+}
+
+.next-steps {
+text-align: left;
+display: flex; flex-direction: column; gap: 16px;
+margin-bottom: 44px;
+}
+.step-item {
+display: flex; gap: 16px; align-items: flex-start;
+font-size: 0.85rem; font-weight: 300;
+color: rgba(255,255,255,0.6); line-height: 1.7;
+}
+.step-num {
+font-family: var(–font-display);
+font-size: 0.9rem; color: var(–copper-light);
+flex-shrink: 0; margin-top: 2px; min-width: 20px;
+}
+.step-item strong { color: var(–warm-white); font-weight: 400; }
+
+.divider2 { width: 36px; height: 1px; background: rgba(196,160,96,0.15); margin: 0 auto 36px; }
+
+.contact-note {
+font-size: 0.8rem; font-weight: 300;
+color: rgba(255,255,255,0.35); line-height: 1.8;
+}
+.contact-note a {
+color: var(–copper-light); text-decoration: none;
+border-bottom: 1px solid rgba(196,160,96,0.3);
+padding-bottom: 1px;
+}
+.contact-note a:hover { border-bottom-color: var(–copper-light); }
+
+/* FOOTER */
+footer {
+border-top: 1px solid rgba(255,255,255,0.06);
+padding: 28px 0; text-align: center;
+}
+.footer-brand {
+font-family: var(–font-body); font-size: 0.66rem; font-weight: 300;
+letter-spacing: 0.35em; text-transform: uppercase;
+color: rgba(255,255,255,0.2);
+}
+
+@media(max-width:580px){
+.card { padding: 44px 24px; }
+nav { padding: 18px 20px; }
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+<span class="nav-brand">Briana Cello</span>
+</nav>
+
+<main>
+<div class="glow"></div>
+<div class="ring" style="width:500px;height:500px;"></div>
+<div class="ring" style="width:760px;height:760px;border-color:rgba(196,160,96,0.04);"></div>
+
+<div class="card">
+<div class="check-circle">✦</div>
+
+```
+<span class="label">Payment Confirmed</span>
+<h1 class="title">Your session<br/>is <em>reserved.</em></h1>
+<p class="subtitle">Welcome to your first frequency experience.</p>
+
+<div class="divider"></div>
+
+<p class="steps-title">What happens next</p>
+
+<div class="next-steps">
+<div class="step-item">
+<span class="step-num">01</span>
+<span><strong>Check your inbox.</strong> A confirmation email is on its way with everything you need to know about your session.</span>
+</div>
+<div class="step-item">
+<span class="step-num">02</span>
+<span><strong>Prepare three elements.</strong> The name and address of your space, a recent photograph or floor plan, and a date symbolising the construction of the space.</span>
+</div>
+<div class="step-item">
+<span class="step-num">03</span>
+<span><strong>We will be in touch within 24 hours</strong> to confirm your session date and collect the details needed to begin.</span>
+</div>
+</div>
+
+<div class="divider2"></div>
+
+<p class="contact-note">
+Questions? Reach us at <a href="mailto:contact@brianacello.com">contact@brianacello.com</a>
+</p>
+```
+
+</div>
+</main>
+
+<footer>
+<p class="footer-brand">Briana Cello</p>
+</footer>
+
+</body>
+</html>
