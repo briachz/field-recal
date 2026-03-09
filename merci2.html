@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thank You — Briana Cello</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap");
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--slate: #2A3240;
+--warm-white: #FAF8F5;
+--copper-light: #C4A060;
+--copper-pale: #E8D5B0;
+--taupe-light: #A89F96;
+}
+body {
+background: var(--slate);
+color: var(--warm-white);
+font-family: "Jost", sans-serif;
+min-height: 100vh;
+display: flex; flex-direction: column;
+}
+nav {
+padding: 20px 48px;
+display: flex; align-items: center; justify-content: center;
+border-bottom: 1px solid rgba(196,160,96,0.12);
+}
+.nav-brand {
+font-family: "Jost", sans-serif;
+font-size: 0.78rem; font-weight: 300;
+letter-spacing: 0.38em; text-transform: uppercase;
+color: var(--copper-pale);
+}
+main {
+flex: 1;
+display: flex; align-items: center; justify-content: center;
+padding: 80px 32px;
+position: relative; overflow: hidden;
+}
+.glow {
+position: absolute;
+width: 600px; height: 600px; border-radius: 50%;
+background: radial-gradient(ellipse, rgba(196,160,96,0.07) 0%, transparent 70%);
+top: 50%; left: 50%; transform: translate(-50%,-50%);
+pointer-events: none;
+}
+.card {
+position: relative; z-index: 2;
+max-width: 560px; width: 100%;
+text-align: center;
+border: 1px solid rgba(196,160,96,0.18);
+padding: 64px 52px;
+background: linear-gradient(160deg, rgba(58,69,88,0.8), rgba(42,50,64,0.9));
+}
+.card::before {
+content: '';
+position: absolute; top: 0; left: 0; right: 0; height: 2px;
+background: linear-gradient(to right, transparent, var(--copper-light), transparent);
+}
+.mark {
+font-size: 1.6rem; color: var(--copper-light);
+margin-bottom: 32px; display: block;
+}
+.label {
+font-size: 0.56rem; font-weight: 500;
+letter-spacing: 0.32em; text-transform: uppercase;
+color: var(--copper-light); margin-bottom: 20px; display: block;
+}
+.title {
+font-family: "Cormorant Garamond", Georgia, serif;
+font-size: clamp(1.8rem, 4vw, 2.6rem);
+font-weight: 300; line-height: 1.2;
+color: var(--warm-white); margin-bottom: 32px;
+}
+.divider { width: 36px; height: 1px; background: rgba(196,160,96,0.25); margin: 0 auto 32px; }
+.message {
+font-size: 0.9rem; font-weight: 300;
+color: rgba(255,255,255,0.55); line-height: 1.9;
+}
+footer {
+border-top: 1px solid rgba(255,255,255,0.06);
+padding: 28px 0; text-align: center;
+}
+.footer-brand {
+font-size: 0.66rem; font-weight: 300;
+letter-spacing: 0.35em; text-transform: uppercase;
+color: rgba(255,255,255,0.2);
+}
+@media(max-width:560px){ .card { padding: 44px 24px; } nav { padding: 18px 20px; } }
+</style>
+</head>
+<body>
+<nav><span class="nav-brand">Briana Cello</span></nav>
+<main>
+<div class="glow"></div>
+<div class="card">
+<span class="mark">✦</span>
+<span class="label">Form Received</span>
+<h1 class="title">Thank you.</h1>
+<div class="divider"></div>
+<p class="message">We have received your information and will be in touch within 24 hours to confirm your session date.</p>
+</div>
+</main>
+<footer><p class="footer-brand">Briana Cello</p></footer>
+</body>
+</html>
