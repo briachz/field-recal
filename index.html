@@ -587,97 +587,59 @@ Secured by Stripe · SSL encrypted
 <div class="rule"></div>
 <div class="faq-list">
 <div class="faq-item">
-<div class="faq-q">
+<div class="faq-q" onclick="toggleFaq(this)">
 <h4>Is this really done remotely? How can that be?</h4>
 <div class="faq-icon">+</div>
 </div>
 <div class="faq-a">Yes — the work is performed in the informational field, which operates beyond physical proximity. Quantum-based frequency transmission via scalar antenna reaches any location with the same precision and intensity regardless of geographic distance. The informational field is not subject to space or time.</div>
 </div>
 <div class="faq-item">
-<div class="faq-q">
+<div class="faq-q" onclick="toggleFaq(this)">
 <h4>What is the difference between this session and a full recalibration program?</h4>
 <div class="faq-icon">+</div>
 </div>
 <div class="faq-a">The Field Recalibration Session is a taster — a single session designed to give you a direct, tangible experience of frequency work. A full recalibration program involves multiple sessions tailored to the specific needs, history and use of your space, and produces deeper results. This session is the ideal first step before exploring our complete programs.</div>
 </div>
 <div class="faq-item">
-<div class="faq-q">
+<div class="faq-q" onclick="toggleFaq(this)">
 <h4>How quickly will I notice the results?</h4>
 <div class="faq-icon">+</div>
 </div>
 <div class="faq-a">Many clients report a perceptible shift within hours — a lightness, clarity and openness in the space. The effect deepens over 24 to 48 hours as the frequencies settle and integrate into the field. The experience varies depending on the initial state of the space and individual sensitivity.</div>
 </div>
 <div class="faq-item">
-<div class="faq-q">
+<div class="faq-q" onclick="toggleFaq(this)">
 <h4>Do I need to be present in the space during the session?</h4>
 <div class="faq-icon">+</div>
 </div>
 <div class="faq-a">No. The session is performed entirely remotely. You may be anywhere in the world. The only requirement is that you provide the three elements before the session begins: the name and address of the space, a recent photograph or floor plan, and an origin date symbolising the construction of the space.</div>
 </div>
 <div class="faq-item">
-<div class="faq-q">
+<div class="faq-q" onclick="toggleFaq(this)">
 <h4>What kind of space can be recalibrated?</h4>
 <div class="faq-icon">+</div>
 </div>
 <div class="faq-a">Any space — a home, a home office, a professional practice, a studio, a retail space, a property on the market. The method works for spaces of any size and type. If you have a specific space in mind and are unsure whether it qualifies, simply reach out before booking.</div>
 </div>
 <div class="faq-item">
-<div class="faq-q">
+<div class="faq-q" onclick="toggleFaq(this)">
 <h4>How often should a space be recalibrated?</h4>
 <div class="faq-icon">+</div>
 </div>
 <div class="faq-a">Frequency needs depend entirely on how the space is used and what it absorbs. A medical or therapeutic practice benefits from two or more sessions per week to maintain a clear, high-quality field and support client retention. A trade show stand benefits from daily recalibration throughout the event. A home may benefit from one or two sessions per week, or following specific events such as periods of tension, conflict or significant change. A property that is not attracting buyers may benefit from several targeted sessions to clear and reset its energetic signature. We tailor all ongoing programs to the specific rhythm and needs of your space.</div>
 </div>
 <div class="faq-item">
-<div class="faq-q">
-<h4>What happens after this session — what are my next steps?</h4>
-<div class="faq-icon">+</div>
-</div>
-<div class="faq-a">After experiencing their first session, many clients choose to explore our deeper recalibration programs — including our 10-Day Space Recalibration, Environmental Revenue Recalibration, Stability Retainer, Event Optimization Plan, and our Monthly and Quarterly Subscription packages, which are fully tailored to your space and its specific needs. We will be in touch after your session to discuss what you experienced and guide you toward the program that best serves your situation.</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- FINAL CTA -->
-
-<section class="final-cta">
-<div class="container" style="text-align:center;">
-<h2 class="final-title">Experience the shift<br/><em>for yourself.</em></h2>
-<p class="final-sub">A single session. A space you know. The beginning of a new relationship with your environment.</p>
-<a href="#payment" class="btn">Reserve My Field Recalibration Session</a>
-<p style="margin-top:16px;font-size:0.68rem;color:rgba(255,255,255,0.16);letter-spacing:0.08em;">$333 · Remote delivery · Worldwide · Results immediate</p>
-</div>
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-<div class="container">
-<p class="footer-brand">Briana Cello</p>
-<p class="footer-sub">Quantum Frequency for Leaders &amp; Spaces · BrianaCello.com</p>
-<p class="footer-copy">© Briana Cello · All rights reserved</p>
-</div>
-</footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-document.querySelectorAll('.faq-q').forEach(function(q) {
-q.addEventListener('click', function() {
-var item = this.closest('.faq-item');
-var isOpen = item.classList.contains('open');
-document.querySelectorAll('.faq-item.open').forEach(function(i) {
-i.classList.remove('open');
-});
-if (!isOpen) item.classList.add('open');
-});
-});
-var nav = document.getElementById('nav');
-if (nav) {
-window.addEventListener('scroll', function() {
-nav.classList.toggle('scrolled', window.scrollY > 50);
-});
+<div class="faq-q" onclick="toggleFaq(this)">
+function toggleFaq(el) {
+var item = el.closest('.faq-item');
+var open = item.classList.contains('open');
+document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+if (!open) item.classList.add('open');
 }
+
+window.addEventListener('scroll', function() {
+var nav = document.getElementById('nav');
+if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 </script>
 
