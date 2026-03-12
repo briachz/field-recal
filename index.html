@@ -215,7 +215,8 @@ background: var(–copper-light); border: 2px solid var(–slate);
 .included-sub { font-size: 0.78rem; color: var(–taupe-light); font-style: italic; margin-bottom: 28px; }
 .included-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .included-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 0.86rem; font-weight: 300; color: var(–char-mid); line-height: 1.7; }
-.included-list li::before { content: “—”; color: var(–copper); flex-shrink: 0; font-family: var(–font-display); }
+.included-list li::before { content: “\2014”; color: var(–copper); flex-shrink: 0; font-family: var(–font-display); }
+
 .included-list li strong { color: var(–charcoal); font-weight: 500; }
 
 /* NEED GRID */
@@ -630,6 +631,37 @@ Secured by Stripe · SSL encrypted
 </div>
 <div class="faq-item">
 <div class="faq-q" onclick="toggleFaq(this)">
+<h4>What happens after this session — what are my next steps?</h4>
+<div class="faq-icon">+</div>
+</div>
+<div class="faq-a">After experiencing their first session, many clients choose to explore our deeper recalibration programs — including our 10-Day Space Recalibration, Environmental Revenue Recalibration, Stability Retainer, Event Optimization Plan, and our Monthly and Quarterly Subscription packages, which are fully tailored to your space and its specific needs. We will be in touch after your session to discuss what you experienced and guide you toward the program that best serves your situation.</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+<div class="container" style="text-align:center;">
+<h2 class="final-title">Experience the shift<br/><em>for yourself.</em></h2>
+<p class="final-sub">A single session. A space you know. The beginning of a new relationship with your environment.</p>
+<a href="#payment" class="btn">Reserve My Field Recalibration Session</a>
+<p style="margin-top:16px;font-size:0.68rem;color:rgba(255,255,255,0.16);letter-spacing:0.08em;">$333 · Remote delivery · Worldwide · Results immediate</p>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<div class="container">
+<p class="footer-brand">Briana Cello</p>
+<p class="footer-sub">Quantum Frequency for Leaders &amp; Spaces · BrianaCello.com</p>
+<p class="footer-copy">© Briana Cello · All rights reserved</p>
+</div>
+</footer>
+
+<script>
 function toggleFaq(el) {
 var item = el.closest('.faq-item');
 var open = item.classList.contains('open');
@@ -645,3 +677,4 @@ if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
 
 </body>
 </html>
+
